@@ -37,6 +37,7 @@
 
     .box-style {
         width: 18rem;
+        margin: 5px;
 
     }
 
