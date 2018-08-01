@@ -1,9 +1,13 @@
 <template>
     <div id="app">
         <app-header></app-header>
-        <div class="alert alert-primary" role="alert" style="text-align: center">
+        <!--<div class="alert alert-primary" role="alert" style="text-align: center">
             My Diary App
-        </div>
+        </div>-->
+
+        <router-view></router-view>
+
+
         <app-footer></app-footer>
     </div>
 </template>
