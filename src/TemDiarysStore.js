@@ -1,4 +1,4 @@
-import DiaryClass from "../Class/DiaryClass";
+import DiaryClass from "./Class/DiaryClass";
 
 const diarys = [
     new DiaryClass('A', new Date(2018.12, 3), "HIHIH"),
