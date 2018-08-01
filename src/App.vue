@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue'
+    // import HelloWorld from './components/HelloWorld.vue'
     import AppHeader from './components/BasicComponent/Header.vue'
     import AppFooter from './components/BasicComponent/Footer.vue'
 
@@ -17,7 +17,7 @@
     export default {
         name: 'app',
         components: {
-            HelloWorld,
+            // HelloWorld,
             'app-header': AppHeader,
             'app-footer': AppFooter,
         }
