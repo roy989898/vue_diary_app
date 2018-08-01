@@ -10,6 +10,11 @@ const router = new VueRouter({
     mode: 'history',
     routes // (缩写) 相当于 routes: routes
 });
+
+Vue.filter('dateFormat', function (value) {
+    let showDate = value.getFullYear() + "/" + (value.getMonth() + 1) + "/" + value.getDate();
+    return showDate;
+});
 new Vue({
     render: h => h(App),
     router: router,
