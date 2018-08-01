@@ -1,7 +1,7 @@
 import Diarys from './components/DiaryRelatedComponent/Diarys.vue';
 
 const routes = [
-    {path: '/diarys', component: Diarys},
+    {path: '/', component: Diarys},
 ];
 
 
