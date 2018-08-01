@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="container-fluid">
         <app-header></app-header>
         <!--<div class="alert alert-primary" role="alert" style="text-align: center">
             My Diary App
