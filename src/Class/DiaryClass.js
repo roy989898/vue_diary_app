@@ -1,12 +1,17 @@
 export default class DiaryClass {
 
 
-    constructor(title, date, content) {
+    constructor(id, title, date, content) {
         this._title = title;
         this._date = date;
         this._content = content;
+        this._id = id;
     }
 
+
+    get id() {
+        return this._id;
+    }
 
     get title() {
         return this._title;
