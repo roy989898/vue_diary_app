@@ -18,8 +18,8 @@
         name: 'app',
         components: {
             // HelloWorld,
-            'app-header': AppHeader,
-            'app-footer': AppFooter,
+            AppHeader,
+            AppFooter,
         }
     }
 </script>
