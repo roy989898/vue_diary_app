@@ -34,7 +34,10 @@
         },
         methods: {
             deleteADiary() {
-                this.$store.dispatch('deleteDiary', this.id)
+
+                if (confirm("Deleted?")) {
+                    this.$store.dispatch('deleteDiary', this.id)
+                }
             },
         }
 
