@@ -4,6 +4,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import routes from './routes'
 import store from './store'
+import diarys from './TemDiarysStore'
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
@@ -22,4 +23,8 @@ new Vue({
     store,
     render: h => h(App),
     router: router,
+    created: function () {
+        this.$store.dispatch('setDiarys', diarys);
+
+    },
 }).$mount('#app');
