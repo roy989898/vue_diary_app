@@ -12,7 +12,8 @@
 
 <script>
     import DiaryBox from './DiaryBox.vue'
-    import diarys from '../../TemDiarysStore'
+    // import diarys from '../../TemDiarysStore'
+    import {mapGetters} from 'vuex'
 
     export default {
         name: "diarys",
@@ -22,9 +23,12 @@
         },
         // props: ['diarys']
         computed: {
-            diarys() {
+            /*diarys() {
                 return diarys;
-            }
+            }*/
+            ...mapGetters({
+                diarys: 'getDiarys',
+            })
         }
     }
 </script>
