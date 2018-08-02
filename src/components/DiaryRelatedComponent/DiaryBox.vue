@@ -6,7 +6,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{date}}</h6>
                 <p class="card-text content">{{content}}</p>
                 <!--todo set the delete and edit button-->
-                <a href="#" class="card-link">Delete</a>
+                <a href="#" class="card-link" v-on:click="deleteADiary">Delete</a>
                 <a href="#" class="card-link">Edit</a>
             </div>
         </div>
@@ -27,7 +27,15 @@
             content: {
                 default: 'Default content'
             },
+            id: {
+                required: true
+            }
 
+        },
+        methods: {
+            deleteADiary() {
+                this.$store.dispatch('deleteDiary', this.id)
+            },
         }
 
     }
