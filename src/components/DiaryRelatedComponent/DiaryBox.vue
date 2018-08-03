@@ -35,7 +35,7 @@
         methods: {
             deleteADiary() {
 
-                if (confirm("Deleted?")) {
+                if (confirm("Deleted " + this.title + " " + "?")) {
                     this.$store.dispatch('deleteDiary', this.id)
                 }
             },
