@@ -8,7 +8,16 @@ const getters = {
             return a.date.getTime() - b.date.getTime();
         });
         return result;
-    }
+    },
+    getDiary: state => (id) => {
+        for (let i = 0; i < state.diarys.length; i++) {
+            if (state.diarys[i].id == id) {
+                return state.diarys[i];
+                break;
+            }
+        }
+    },
+
 };
 const mutations = {
     setDiarys(state, diaryArray) {
