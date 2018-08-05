@@ -32,6 +32,13 @@ const mutations = {
             }
         }
     },
+    updateDiary(state, diary) {
+
+        // this.deleteDiary(diary.id);
+        state.diarys.push(diary);
+
+
+    }
 };
 const actions = {
     setDiarys(context, diaryArray) {
@@ -42,6 +49,11 @@ const actions = {
         context.commit('deleteDiary', diaryId);
 
     },
+    updateDiary(context, diary) {
+        context.commit('deleteDiary', diary.id);
+        context.commit('updateDiary', diary);
+
+    }
 
 };
 

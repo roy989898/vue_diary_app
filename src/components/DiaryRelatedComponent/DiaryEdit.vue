@@ -101,6 +101,7 @@
         methods: {
             update() {
                 console.log('update click!!!!');
+                this.$store.dispatch('updateDiary', this.diary);
             }
 
         }
