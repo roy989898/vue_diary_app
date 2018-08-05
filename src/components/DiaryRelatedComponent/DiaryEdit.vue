@@ -1,10 +1,13 @@
 <template>
-    
+    <div>
+        Diary edit
+    </div>
+
 </template>
 
 <script>
     export default {
-        name: "diary-detail"
+        name: "diary-edit"
     }
 </script>
 

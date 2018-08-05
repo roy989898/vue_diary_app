@@ -7,7 +7,7 @@
                 <p class="card-text content">{{content}}</p>
                 <!--todo set the delete and edit button-->
                 <a href="#" class="card-link" v-on:click="deleteADiary">Delete</a>
-                <a href="#" class="card-link">Edit</a>
+                <router-link to="/diary_edit" class="card-link">Edit</router-link>
             </div>
         </div>
     </div>
