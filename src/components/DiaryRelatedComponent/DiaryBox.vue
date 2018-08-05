@@ -5,9 +5,9 @@
                 <h5 class="card-title">{{title}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{date}}</h6>
                 <p class="card-text content">{{content}}</p>
-                <!--todo set the delete and edit button-->
+
                 <a href="#" class="card-link" v-on:click="deleteADiary">Delete</a>
-                <router-link to="/diary_edit" class="card-link">Edit</router-link>
+                <router-link to="/diary_edit/2" class="card-link">Edit</router-link>
             </div>
         </div>
     </div>
@@ -32,6 +32,11 @@
             }
 
         },
+        computed: {
+            editLink() {
+                return /diary_edit/ + this.id;
+            }
+        },
         methods: {
             deleteADiary() {
 
@@ -39,6 +44,7 @@
                     this.$store.dispatch('deleteDiary', this.id)
                 }
             },
+
         }
 
     }
