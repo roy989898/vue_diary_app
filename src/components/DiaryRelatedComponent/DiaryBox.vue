@@ -7,7 +7,7 @@
                 <p class="card-text content">{{content}}</p>
 
                 <a href="#" class="card-link" v-on:click="deleteADiary">Delete</a>
-                <router-link to="/diary_edit/2" class="card-link">Edit</router-link>
+                <router-link :to="editLink" class="card-link">Edit</router-link>
             </div>
         </div>
     </div>
