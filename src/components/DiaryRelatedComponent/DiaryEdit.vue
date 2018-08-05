@@ -16,20 +16,21 @@
                 <input class="form-control" id="date"
                        type="date"
                        placeholder="Enter Date"
-                       v-bind:value="diary.date|dateFormat"
+
+
                 >
             </div>
 
             <div class="form-group">
                 <label for="title">Content</label>
-                <!-- <input class="form-control" id="content"
-                        type="date"
-                        placeholder="Enter Date"
-                        v-bind:value="diary.date|dateFormat"
-                 >-->
 
-                <textarea name="Text1" cols="40" rows="5" class="form-control" id="content"
-                          v-bind:value="diary.content"
+
+                <textarea
+                        name="Text1"
+                        cols="40"
+                        rows="5"
+                        class="form-control" id="content"
+                        v-model="content"
                 ></textarea>
             </div>
 
@@ -66,14 +67,15 @@
                 return diaryCopy;
 
             },
-            /* date:{
-                 get(){
-                     return diary.date;
-                 },
-                 set(value){
-                     diary.date
-                 }
-             },*/
+
+            date: {
+                get() {
+                    return this.diary.date;
+                },
+                set(value) {
+                    this.diary.date = value;
+                }
+            },
             title: {
                 get() {
                     return this.diary.title;
@@ -83,7 +85,15 @@
                 }
 
             },
-            /*content: {},*/
+            content: {
+                get() {
+                    return this.diary.content;
+                },
+                set(value) {
+                    this.diary.content = value;
+                },
+                /*content: {},*/
+            }
         },
         methods: {
             update() {
@@ -92,6 +102,8 @@
 
         }
     }
+
+
 </script>
 
 <style scoped>
