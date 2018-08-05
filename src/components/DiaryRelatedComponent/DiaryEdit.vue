@@ -8,7 +8,7 @@
                 <label for="title">Title</label>
                 <input class="form-control" id="title"
                        placeholder="Enter Title"
-                       v-bind:value="diary.title">
+                       v-model="title">
             </div>
             <!--v-bind:value="diary.date|dateFormat"-->
             <div class="form-group">
@@ -32,6 +32,12 @@
                           v-bind:value="diary.content"
                 ></textarea>
             </div>
+
+            <button
+                    class="btn btn-primary"
+                    v-on:click.prevent="update"
+            >Update
+            </button>
         </form>
 
     </div>
@@ -40,6 +46,9 @@
 
 <script>
     // import {mapGetters} from 'vuex'
+    // import DiaryClass from '../../Class/DiaryClass'
+    import _ from 'lodash'
+
     export default {
         name: "diary-edit",
         computed: {
@@ -50,11 +59,38 @@
 
             diary() {
                 let diary = this.$store.getters.getDiary(this.diaryId);
-                console.log(diary);
-                return diary;
+                // console.log(diary);
+                let diaryCopy = _.cloneDeep(diary);
+                /*   console.log("copy", diaryCopy);
+                   console.log("original ", diary);*/
+                return diaryCopy;
 
-            }
+            },
+            /* date:{
+                 get(){
+                     return diary.date;
+                 },
+                 set(value){
+                     diary.date
+                 }
+             },*/
+            title: {
+                get() {
+                    return this.diary.title;
+                },
+                set(value) {
+                    this.diary.title = value;
+                }
+
+            },
+            /*content: {},*/
         },
+        methods: {
+            update() {
+                console.log('update click!!!!');
+            }
+
+        }
     }
 </script>
 
