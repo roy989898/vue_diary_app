@@ -2,8 +2,10 @@
     <div>
 
         <div class="row">
-            <h1 class="col-sm-6 ">Diary App</h1> <a href="#" class="col-sm-3 ">search</a> <a href="#" class="col-sm-3">Add
-            new diary</a>
+            <h1 class="col-sm">Diary App</h1>
+            <router-link to="/" class="col-sm ">Show all</router-link>
+            <a href="#" class="col-sm ">search</a>
+            <a href="#" class="col-sm">Add new diary</a>
         </div>
 
 
