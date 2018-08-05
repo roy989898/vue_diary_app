@@ -75,7 +75,8 @@
                     return dateFormatFilter(this.diary.date);
                 },
                 set(value) {
-                    this.diary.date = value;
+                    let newDate = new Date(value)
+                    this.diary.date = newDate;
                 }
             },
             title: {
