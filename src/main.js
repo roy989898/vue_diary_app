@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import routes from './routes'
 import store from './store'
 import diarys from './TemDiarysStore'
+import dateFormat from 'dateformat'
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
@@ -16,8 +17,9 @@ const router = new VueRouter({
 });
 
 Vue.filter('dateFormat', function (value) {
-    let showDate = value.getFullYear() + "/" + (value.getMonth() + 1) + "/" + value.getDate();
-    return showDate;
+    // let showDate = value.getFullYear() + "/" + (value.getMonth() + 1) + "/" + value.getDate();
+    // 1980-01-01
+    return dateFormat(value, 'yyyy-mm-dd');
 });
 new Vue({
     store,
