@@ -15,6 +15,7 @@
                 <label for="title">Date</label>
                 <input class="form-control" id="date"
                        type="date"
+                       v-model="date"
                        placeholder="Enter Date"
 
 
@@ -49,6 +50,7 @@
     // import {mapGetters} from 'vuex'
     // import DiaryClass from '../../Class/DiaryClass'
     import _ from 'lodash'
+    import {dateFormatFilter} from '../../filter'
 
     export default {
         name: "diary-edit",
@@ -70,7 +72,7 @@
 
             date: {
                 get() {
-                    return this.diary.date;
+                    return dateFormatFilter(this.diary.date);
                 },
                 set(value) {
                     this.diary.date = value;
