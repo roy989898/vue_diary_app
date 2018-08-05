@@ -10,9 +10,8 @@
         name: "diary-edit",
         computed: {
             diaryId() {
-                let params = this.$router.params;
-                console.log('YOYOY', this.$router);
-                return params.id;
+                // console.log(this.$route.params);
+                return this.$route.params.id;
             },
         },
     }

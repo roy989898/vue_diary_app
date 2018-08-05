@@ -9,6 +9,7 @@
         name: "SearchPage",
         computed: {
             searchId() {
+                console.log(this.$route.params);
                 return this.$route.params.search_id;
             },
         }
